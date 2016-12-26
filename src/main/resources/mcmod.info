@@ -1,0 +1,16 @@
+[
+{
+  "modid": "neoa",
+  "name": "NEoA",
+  "description": "Mod Specifically for the NEoA Modpack by MysticAura for Tlovetech's sub server",
+  "version": "0.0.0.1",
+  "mcversion": "1.10.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mowmaster"],
+  "credits": "Thanks to all the guys/gals that have helped me learn along the way :)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
