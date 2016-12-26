@@ -1,13 +1,6 @@
-/.gradle/
 /build/
 /eclipse/
-/gradle/
 /run/
-*.iws
-*.ipr
-*.iml
-*.bat
-/gradlew
-*.properties
 /out/
 
+/.gradle/
