@@ -3,7 +3,7 @@
 /run/
 /out/
 /.gradle/
-/.iml/
-/.ipr/
-/.iws/
-/.properties/
+*.iml
+*.ipr
+*.iws
+*.properties
