@@ -3,7 +3,7 @@ package com.mowmaster.neoa.references;
 /**
  * Created by KingMowmaster on 12/25/2016.
  */
-public class References
+public class Reference
 {
     public static final String MODID = "NewEraOfAdventure";
     public static final String MODNAME = "NEoA";
