@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
-public class VanillaTweaks
+public class VanillaTweakss
 {
   public static void vT()
   {
