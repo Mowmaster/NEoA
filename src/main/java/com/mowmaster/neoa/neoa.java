@@ -18,10 +18,20 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
         @SidedProxy(serverSide = reference.serverside, clientSide = reference.clientside)
         public static CommonProxy proxy;
+        
+        
+        private static File configDir;
+        public static File getConfigDir()
+        {
+            return configDir;
+        }
 
         @Mod.EventHandler
         public void preInit(FMLPreInitializationEvent event)
         {
+            configDir = new File(event.getModConfigurationDirectory() + "/" + reference.modid);
+            configDir.mkdirs();
+            config.initCOnfig(new File(configDir.getPath(),reference.modid + ".cfg"));
 
         }
         @Mod.EventHandler
@@ -33,7 +43,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
         @Mod.EventHandler
         public void postInit(FMLPostInitializationEvent event)
         {
-
+            vanillaTweaks.vT();
         }
 
     }
