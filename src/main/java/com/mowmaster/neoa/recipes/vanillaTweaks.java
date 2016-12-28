@@ -18,6 +18,7 @@ public class vanillaTweaks
     
     if (config.LeatherForDays)
     {
+      // Smelt Rotten Flesh into Leather
       GameRegistry.addSmelting(new ItemStack(Items.ROTTEN_FLESH),new ItemStack(Items.Leather,1), 0.1F);
     }
     
