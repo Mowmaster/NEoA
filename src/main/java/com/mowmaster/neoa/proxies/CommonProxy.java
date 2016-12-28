@@ -5,7 +5,7 @@ package com.mowmaster.neoa.proxies;
  */
 public class CommonProxy
 {
-    public void preInit()
+    public void PreInit()
     {
 
     }

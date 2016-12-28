@@ -14,28 +14,28 @@ public class Config
   
   
   
-  public static boolean RecyclableGlass;
-  public static boolean FlintForDays;
-  public static boolean LeatherForDays;
+  public static boolean recyclableGlass;
+  public static boolean flintForDays;
+  public static boolean leatherForDays;
   
   
   
-  public static void initCongif(File file)
+  public static void InitConfig(File file)
   {
     configFile = new Configuration(file);
-    syncConfig();
+    SyncConfig();
   }
   
-  public static void syncConfig()
+  public static void SyncConfig()
   {
     String category;
     
-    catagory = "Vanilla Tweaks";
-    configFile.addCustomCatagoryComment(catagory, "Added by NEoA");
+    category = "Vanilla Tweaks";
+    configFile.addCustomCategoryComment(category, "Added by NEoA");
     
-    RecyclableGlass = configFile.getBoolean("Recyclable Glass", catagory, true, "Do you want to enable the crafting and smelting of glass dust?");
-    FlintForDays = configFile.getBoolean("Flint for Days", catagory, true, "Should two gravel amke flint?");
-    LeatherForDays = configFile.getBoolean("Leather for Days", catagory, true, "Can leather be smelted from flesh?");
+    recyclableGlass = configFile.getBoolean("Recyclable Glass", category, true, "Do you want to enable the crafting and smelting of glass dust?");
+    flintForDays = configFile.getBoolean("Flint for Days", category, true, "Should two gravel amke flint?");
+    leatherForDays = configFile.getBoolean("Leather for Days", category, true, "Can leather be smelted from flesh?");
     
   }
   

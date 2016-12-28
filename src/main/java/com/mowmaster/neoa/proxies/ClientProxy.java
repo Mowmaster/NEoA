@@ -11,7 +11,7 @@ public class ClientProxy extends CommonProxy
     @Override
     @SideOnly(Side.CLIENT)
 
-    public void preInit()
+    public void PreInit()
     {
 
     }
