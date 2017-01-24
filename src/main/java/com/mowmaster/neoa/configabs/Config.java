@@ -17,6 +17,8 @@ public class Config
   public static boolean recyclableGlass;
   public static boolean flintForDays;
   public static boolean leatherForDays;
+  public static boolean compactUncrafting;
+  public static boolean craftableelytra;
   
   
   
@@ -34,8 +36,17 @@ public class Config
     configFile.addCustomCategoryComment(category, "Added by NEoA");
     
     recyclableGlass = configFile.getBoolean("Recyclable Glass", category, true, "Do you want to enable the crafting and smelting of glass dust?");
-    flintForDays = configFile.getBoolean("Flint for Days", category, true, "Should two gravel amke flint?");
+    flintForDays = configFile.getBoolean("Flint for Days", category, true, "Should two gravel make flint?");
     leatherForDays = configFile.getBoolean("Leather for Days", category, true, "Can leather be smelted from flesh?");
+    compactUncrafting = configFile.getBoolean("Uncrafting Vanilla Compact Blocks", category, true, "Can you uncraft vanilla compact blocks");
+    craftableelytra = configFile.getBoolean("Craftable Elytra", category, false, "Can you craft elytras");
+
+
+
+
+
+
+    configFile.save();
     
   }
   

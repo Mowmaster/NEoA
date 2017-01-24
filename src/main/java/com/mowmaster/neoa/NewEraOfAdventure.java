@@ -1,6 +1,7 @@
 package com.mowmaster.neoa;
 
 import com.mowmaster.neoa.configabs.Config;
+import com.mowmaster.neoa.items.ItemRegistry;
 import com.mowmaster.neoa.proxies.CommonProxy;
 import com.mowmaster.neoa.recipes.VanillaTweaks;
 import com.mowmaster.neoa.references.Reference;
@@ -15,39 +16,39 @@ import java.io.File;
 
 
 @Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.VERSION)
-    public class NewEraOfAdventure
-    {
-        @Mod.Instance(Reference.MODID)
-        public static NewEraOfAdventure instance;
+public class NewEraOfAdventure {
+    @Mod.Instance(Reference.MODID)
+    public static NewEraOfAdventure instance;
 
-        @SidedProxy(serverSide = Reference.SERVER_SIDE, clientSide = Reference.CLIENT_SIDE)
-        public static CommonProxy proxy;
-        
-        
-        private static File configDir;
-        public static File getConfigDir()
-        {
-            return configDir;
-        }
+    @SidedProxy(serverSide = Reference.SERVER_SIDE, clientSide = Reference.CLIENT_SIDE)
+    public static CommonProxy proxy;
 
-        @Mod.EventHandler
-        public void preInit(FMLPreInitializationEvent event)
-        {
-            configDir = new File(event.getModConfigurationDirectory() + "/" + Reference.MODID);
-            configDir.mkdirs();
-            Config.InitConfig(new File(configDir.getPath(), Reference.MODID + ".cfg"));
 
-        }
-        @Mod.EventHandler
-        public void init(FMLInitializationEvent event)
-        {
-            proxy.PreInit();
-            MinecraftForge.EVENT_BUS.register(this);
-        }
-        @Mod.EventHandler
-        public void postInit(FMLPostInitializationEvent event)
-        {
-            VanillaTweaks.vT();
-        }
+    private static File configDir;
+
+    public static File getConfigDir() {
+        return configDir;
+    }
+
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        configDir = new File(event.getModConfigurationDirectory() + "/" + Reference.MODID);
+        configDir.mkdirs();
+        Config.InitConfig(new File(configDir.getPath(), Reference.MODID + ".cfg"));
+
+        ItemRegistry.RegisterItems();
 
     }
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+        proxy.PreInit();
+        MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        VanillaTweaks.vT();
+    }
+
+}

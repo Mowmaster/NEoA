@@ -1,5 +1,6 @@
 package com.mowmaster.neoa.proxies;
 
+import com.mowmaster.neoa.items.ItemRenderRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -13,6 +14,6 @@ public class ClientProxy extends CommonProxy
 
     public void PreInit()
     {
-
+        ItemRenderRegistry.ItemRR();
     }
 }
