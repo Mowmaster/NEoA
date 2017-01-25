@@ -32,8 +32,16 @@ minecraft {
     mappings = "snapshot_20161111"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
+repositories {
+    maven {//Tinkers
+        name 'Tinkerers Maven'
+        url 'http://dvs1.progwml6.com/files/maven'
+    }
 
 dependencies {
+    deobfCompile "slimeknights.mantle:Mantle:1.10.2-1.+"
+    deobfCompile "slimeknights:TConstruct:1.10.2-2.+"
+}
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"

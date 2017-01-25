@@ -2,7 +2,11 @@ package com.mowmaster.neoa;
 
 import com.mowmaster.neoa.configabs.Config;
 import com.mowmaster.neoa.items.ItemRegistry;
+import com.mowmaster.neoa.modtweaks.TinkerersConstruct;
+import com.mowmaster.neoa.modtweaks.VanillaMinecraft;
 import com.mowmaster.neoa.proxies.CommonProxy;
+import com.mowmaster.neoa.recipes.OreDictionary;
+import com.mowmaster.neoa.recipes.RecipeRemover;
 import com.mowmaster.neoa.recipes.VanillaTweaks;
 import com.mowmaster.neoa.references.Reference;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,6 +41,7 @@ public class NewEraOfAdventure {
         Config.InitConfig(new File(configDir.getPath(), Reference.MODID + ".cfg"));
 
         ItemRegistry.RegisterItems();
+        OreDictionary.addEntries();
 
     }
 
@@ -48,7 +53,13 @@ public class NewEraOfAdventure {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+        RecipeRemover.removedCraftingItems();
+        RecipeRemover.removedSmeltingItems();
+
         VanillaTweaks.vT();
+
+        TinkerersConstruct.checkTinkerersConstruct();
+        VanillaMinecraft.checkVanilla();
     }
 
 }
