@@ -2,8 +2,7 @@ package com.mowmaster.neoa;
 
 import com.mowmaster.neoa.configabs.Config;
 import com.mowmaster.neoa.items.ItemRegistry;
-import com.mowmaster.neoa.modtweaks.TinkerersConstruct;
-import com.mowmaster.neoa.modtweaks.VanillaMinecraft;
+import com.mowmaster.neoa.modtweaks.*;
 import com.mowmaster.neoa.proxies.CommonProxy;
 import com.mowmaster.neoa.recipes.OreDictionary;
 import com.mowmaster.neoa.recipes.RecipeRemover;
@@ -58,6 +57,14 @@ public class NewEraOfAdventure {
 
         VanillaTweaks.vT();
 
+        ActuallyAdditions.checkActuallyAdditons();
+        Backpack.checkBackpack();
+        CaveCraftTSON.checkTSON();
+        EnderIO.checkEIO();
+        ExtraUtilitiesTwo.checkEU2();
+        Forestry.checkForestry();
+        ImmersiveEngineering.checkIE();
+        ModdedTweeks.checkModdedTweeks();
         TinkerersConstruct.checkTinkerersConstruct();
         VanillaMinecraft.checkVanilla();
     }

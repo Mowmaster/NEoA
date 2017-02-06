@@ -19,6 +19,8 @@ public class Config
   public static boolean leatherForDays;
   public static boolean compactUncrafting;
   public static boolean craftableelytra;
+
+  public static boolean VoidDrums;
   
   
   
@@ -42,6 +44,9 @@ public class Config
     craftableelytra = configFile.getBoolean("Craftable Elytra", category, false, "Can you craft elytras");
 
 
+    category = "Extra Utilities 2";
+    configFile.addCustomCategoryComment(category,"Extra Utils 2 Tweeks");
+    VoidDrums = configFile.getBoolean("Void Drums",category,false,"Can you void liquids by crafting drums?");
 
 
 
