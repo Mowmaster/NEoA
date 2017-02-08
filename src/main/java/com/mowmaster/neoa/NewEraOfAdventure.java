@@ -4,7 +4,7 @@ import com.mowmaster.neoa.configabs.Config;
 import com.mowmaster.neoa.items.ItemRegistry;
 import com.mowmaster.neoa.modtweaks.*;
 import com.mowmaster.neoa.proxies.CommonProxy;
-import com.mowmaster.neoa.recipes.OreDictionary;
+import com.mowmaster.neoa.recipes.NEoAOreDictionary;
 import com.mowmaster.neoa.recipes.RecipeRemover;
 import com.mowmaster.neoa.recipes.VanillaTweaks;
 import com.mowmaster.neoa.references.Reference;
@@ -40,7 +40,7 @@ public class NewEraOfAdventure {
         Config.InitConfig(new File(configDir.getPath(), Reference.MODID + ".cfg"));
 
         ItemRegistry.RegisterItems();
-        OreDictionary.addEntries();
+        NEoAOreDictionary.addEntries();
 
     }
 
@@ -66,6 +66,7 @@ public class NewEraOfAdventure {
         ImmersiveEngineering.checkIE();
         ModdedTweeks.checkModdedTweeks();
         TinkerersConstruct.checkTinkerersConstruct();
+        Quark.checkQuark();
         VanillaMinecraft.checkVanilla();
     }
 
