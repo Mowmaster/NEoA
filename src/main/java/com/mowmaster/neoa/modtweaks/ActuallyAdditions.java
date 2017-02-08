@@ -54,6 +54,15 @@ public class ActuallyAdditions
                 }
             }
 
+            if (Loader.isModLoaded("substratum"))
+            {
+                Item EPDUST = Item.REGISTRY.getObject(new ResourceLocation("substratum:dust"));
+                Item EPSDUST = Item.REGISTRY.getObject(new ResourceLocation("substratum:dustSmall"));
+                //meta = 16
+
+                CRUSHER_RECIPES.add(new CrusherRecipe(new ItemStack(Items.ENDER_PEARL),new ItemStack(EPDUST,1,16),new ItemStack(EPSDUST,1,16),10));
+            }
+
         }
     }
 }

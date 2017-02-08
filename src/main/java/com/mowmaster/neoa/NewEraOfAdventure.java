@@ -65,6 +65,10 @@ public class NewEraOfAdventure {
         Forestry.checkForestry();
         ImmersiveEngineering.checkIE();
         ModdedTweeks.checkModdedTweeks();
+        Railcraft.checkRailcraft();
+        RFTools.checkRFTools();
+        Substratum.checkSubstratum();
+        SuperCircuitMaker.checkSCM();
         TinkerersConstruct.checkTinkerersConstruct();
         Quark.checkQuark();
         VanillaMinecraft.checkVanilla();

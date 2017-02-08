@@ -11,9 +11,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
-/**
- * Created by KingMowmaster on 2/7/2017.
- */
 public class Quark
 {
     public static void checkQuark()
@@ -33,60 +30,20 @@ public class Quark
             GameRegistry.addShapelessRecipe(new ItemStack(Blocks.TRAPPED_CHEST, 1), new ItemStack(QTCrest, 1, OreDictionary.WILDCARD_VALUE));
             GameRegistry.addShapelessRecipe(new ItemStack(Blocks.BOOKSHELF, 1), new ItemStack(QShelf, 1, OreDictionary.WILDCARD_VALUE));
 
-            //Add colorability for Quark Beds
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 0), "dyeWhite", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 1), "dyeOrange", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 2), "dyeMagenta", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 3), "dyeLightBlue", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 4), "dyeYellow", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 5), "dyeLime", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 6), "dyePink", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 7), "dyeGray", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 8), "dyeLightGray", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 9), "dyeCyan", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 10), "dyePurple", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 11), "dyeBlue", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 12), "dyeBrown", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 13), "dyeGreen", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
+
+            // String of comments, the colors.length is so the loop only goes from starting = 0 and loops through all colors(length of the string)
+            String[] color= new String[] {"dyeWhite","dyeOrange","dyeMagenta","dyeLightBlue","dyeYellow","dyeLime","dyePink","dyeGray","dyeLightGray","dyeCyan","dyePurple","dyeBlue","dyeBrown","dyeGreen","dyeBlack"};
+            String[] colors= new String[] {"dyeWhite","dyeOrange","dyeMagenta","dyeLightBlue","dyeYellow","dyeLime","dyePink","dyeGray","dyeLightGray","dyeCyan","dyePurple","dyeBlue","dyeBrown","dyeGreen","dyeRed","dyeBlack"};
+
+            for(int x = 0; x < color.length; x++) {
+                GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, x), color[x], new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
+                GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, x), color[x], new ItemStack(Items.BED)));
+            }
+
+            for(int x = 0; x < colors.length; x++) {
+                GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, x), colors[x], new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
+            }
             GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.BED), "dyeRed", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 14), "dyeBlack", new ItemStack(QBeds, 1, OreDictionary.WILDCARD_VALUE)));
-
-
-            // Add colorability to the Minecraft Bed...UGG!
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 0), "dyeWhite", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 1), "dyeOrange", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 2), "dyeMagenta", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 3), "dyeLightBlue", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 4), "dyeYellow", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 5), "dyeLime", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 6), "dyePink", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 7), "dyeGray", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 8), "dyeLightGray", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 9), "dyeCyan", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 10), "dyePurple", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 11), "dyeBlue", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 12), "dyeBrown", new ItemStack(Items.BED)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 13), "dyeGreen", new ItemStack(Items.BED)));
-            //GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.BED), "dyeRed", new ItemStack(Items.BED))); Removed because it seems silly
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QBeds, 1, 14), "dyeBlack", new ItemStack(Items.BED)));
-
-            //All The Colored Item Frames!
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 0), "dyeWhite", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 1), "dyeOrange", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 2), "dyeMagenta", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 3), "dyeLightBlue", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 4), "dyeYellow", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 5), "dyeLime", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 6), "dyePink", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 7), "dyeGray", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 8), "dyeLightGray", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 9), "dyeCyan", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 10), "dyePurple", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 11), "dyeBlue", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 12), "dyeBrown", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 13), "dyeGreen", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 14), "dyeRed", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(QFrame, 1, 15), "dyeBlack", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
             GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.ITEM_FRAME), "listAllwater", new ItemStack(QFrame, 1, OreDictionary.WILDCARD_VALUE)));
             //GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.ITEM_FRAME), Items.POTIONITEM, new ItemStack(QFrame,1,meta))); //Potions wash Frames?!
 

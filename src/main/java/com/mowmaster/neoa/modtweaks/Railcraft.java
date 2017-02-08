@@ -18,29 +18,22 @@ public class Railcraft
     {
         if(Loader.isModLoaded("railcraft"))
         {
-            //if(Loader.isModLoaded("immersiveengineering"))
-            //{
+            if(Loader.isModLoaded("immersiveengineering"))
+            {
                 Item IEHammer = Item.REGISTRY.getObject(new ResourceLocation("immersiveengineering:tool"));
                 Item Plate = Item.REGISTRY.getObject(new ResourceLocation("railcraft:plate"));
-            /*
-            0=iron
-            1=steel
-            2=tin
-            3=copper
-            4=lead
-            5=silver
-            */
 
                 removeCrafting(Item.REGISTRY.getObject(new ResourceLocation("railcraft:plate")));
 
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Plate, 1, 0), new Object[]{"XY", 'X', "plateIron", 'Y', new ItemStack(IEHammer,1,0)}));
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Plate, 1, 1), new Object[]{"XY", 'X', "plateSteel", 'Y', new ItemStack(IEHammer,1,0)}));
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Plate, 1, 2), new Object[]{"XY", 'X', "plateTin", 'Y', new ItemStack(IEHammer,1,0)}));
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Plate, 1, 3), new Object[]{"XY", 'X', "plateCopper", 'Y', new ItemStack(IEHammer,1,0)}));
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Plate, 1, 4), new Object[]{"XY", 'X', "plateLead", 'Y', new ItemStack(IEHammer,1,0)}));
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Plate, 1, 5), new Object[]{"XY", 'X', "plateSilver", 'Y', new ItemStack(IEHammer,1,0)}));
-
-            //}
+                String[] metal= new String[] {"Iron","Steel","Tin","Copper","Lead","Silver"};
+                for(int x = 0; x < metal.length; x++) {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Plate, 1, x), new Object[]{"XY", 'X', "plate" + metal[x], 'Y', new ItemStack(IEHammer,1,0)}));
+                }
+            }
+            String[] type= new String[] {"helmet","chestplate","leggings","boots"};
+            for(int x = 0; x < type.length; x++) {
+                removeCrafting(Item.REGISTRY.getObject(new ResourceLocation("railcraft:armor_" + type[x] + "_steel")));
+            }
         }
     }
 }
