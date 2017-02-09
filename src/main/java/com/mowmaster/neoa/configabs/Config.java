@@ -19,6 +19,7 @@ public class Config
   public static boolean leatherForDays;
   public static boolean compactUncrafting;
   public static boolean craftableelytra;
+  public static boolean blockcrusher;
 
   public static boolean VoidDrums;
   
@@ -42,6 +43,11 @@ public class Config
     leatherForDays = configFile.getBoolean("Leather for Days", category, true, "Can leather be smelted from flesh?");
     compactUncrafting = configFile.getBoolean("Uncrafting Vanilla Compact Blocks", category, true, "Can you uncraft vanilla compact blocks");
     craftableelytra = configFile.getBoolean("Craftable Elytra", category, false, "Can you craft elytras");
+
+
+    category = "Modded Tweaks";
+    configFile.addCustomCategoryComment(category, "May require other mods to work");
+    blockcrusher = configFile.getBoolean("Handheld Block Crusher *Requires IE* ", category, true, "Can you craft other blocks into cobblestone with a handheld crusher?");
 
 
     category = "Extra Utilities 2";

@@ -5,7 +5,7 @@ package com.mowmaster.neoa.references;
  */
 public class Reference
 {
-    public static final String MODID = "NewEraOfAdventure";
+    public static final String MODID = "neweraofadventure";
     public static final String MODNAME = "NEoA";
     public static final String VERSION = "0.0.0.1";
 

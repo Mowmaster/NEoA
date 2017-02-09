@@ -17,6 +17,7 @@ public class ItemRenderRegistry
             register(ItemRegistry.glass_tinypile);
             register(ItemRegistry.glass_pile);
         }
+        register(ItemRegistry.tool_crusher);
     }
     public static void register(Item item)
     {

@@ -4,11 +4,16 @@ import com.mowmaster.neoa.configabs.Config;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import static com.mowmaster.neoa.items.ItemRegistry.glass_pile;
 import static com.mowmaster.neoa.items.ItemRegistry.glass_tinypile;
+import static com.mowmaster.neoa.items.ItemRegistry.tool_crusher;
 
 
 public class VanillaTweaks
@@ -49,6 +54,15 @@ public class VanillaTweaks
       GameRegistry.addShapedRecipe(new ItemStack(glass_pile, 1), new Object[]{"XX", "XX", 'X', new ItemStack(glass_tinypile, 1)});
       GameRegistry.addSmelting(new ItemStack(glass_pile), new ItemStack(Blocks.GLASS, 1), 0.1F);
     }
+      if (Config.blockcrusher) {
+          if (Loader.isModLoaded("immersiveengineering")) {
+              Item IEmachinepart = Item.REGISTRY.getObject(new ResourceLocation("immersiveengineering:metalDecoration0"));
+              GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(tool_crusher, 1), new Object[]{"XXX", "YZY", "AAA", 'X', "gearSteel", 'Y', new ItemStack(IEmachinepart, 1, 5), 'Z', "cobblestone", 'A', "blockSteel"}));
+              GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.COBBLESTONE), new Object[]{"XY", 'X', "stoneGranite", 'Y', new ItemStack(tool_crusher.setContainerItem(tool_crusher))}));
+              GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.COBBLESTONE), new Object[]{"XY", 'X', "stoneDiorite", 'Y', new ItemStack(tool_crusher.setContainerItem(tool_crusher))}));
+              GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.COBBLESTONE), new Object[]{"XY", 'X', "stoneAndesite", 'Y', new ItemStack(tool_crusher.setContainerItem(tool_crusher))}));
+          }
+      }
 
 
     //if (Config.)
