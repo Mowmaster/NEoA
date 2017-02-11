@@ -6,7 +6,6 @@ import com.mowmaster.neoa.modtweaks.*;
 import com.mowmaster.neoa.proxies.CommonProxy;
 import com.mowmaster.neoa.recipes.NEoAOreDictionary;
 import com.mowmaster.neoa.recipes.RecipeRemover;
-import com.mowmaster.neoa.recipes.VanillaTweaks;
 import com.mowmaster.neoa.references.Reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -55,15 +54,16 @@ public class NewEraOfAdventure {
         RecipeRemover.removedCraftingItems();
         RecipeRemover.removedSmeltingItems();
 
-        VanillaTweaks.vT();
-
         ActuallyAdditions.checkActuallyAdditons();
         Backpack.checkBackpack();
+        Botania.checkBotania();
         CaveCraftTSON.checkTSON();
+        Chisel.checkChisel();
         EnderIO.checkEIO();
         ExtraUtilitiesTwo.checkEU2();
         Forestry.checkForestry();
         ImmersiveEngineering.checkIE();
+        IronChest.checkIronChests();
         ModdedTweeks.checkModdedTweeks();
         Railcraft.checkRailcraft();
         RFTools.checkRFTools();
