@@ -1,0 +1,9 @@
+
+Current fixes to be done for the NEoA Modpack
+
+Mekanism armor is craftable, shouldnt be like the others.
+- Remove Osmium, glowstone, etc armors. leave obsidian? or make harder...
+Dirt crafts into: earthworks and better with mods conflicts
+- if better with mods has an api, make it millable, otherwise edit earthworks recpie.
+Salt issues, water buckets get used with pams? and mekanism salt is hard to find.
+- fix pams recipies
