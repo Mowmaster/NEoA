@@ -2,6 +2,7 @@ package com.mowmaster.neoa.modtweaks;
 
 import de.ellpeck.actuallyadditions.api.recipe.CrusherRecipe;
 import de.ellpeck.actuallyadditions.api.recipe.LensConversionRecipe;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,6 +13,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import static com.mowmaster.neoa.recipes.RecipeRemover.removeCrafting;
+import static com.mowmaster.neoa.recipes.RecipeRemover.removedCraftingItems;
 import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.*;
 
 /**
@@ -86,6 +88,23 @@ public class ActuallyAdditions
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(AAPickaxe,1), new Object[]{"XXX", " Y "," Y ", 'X', new ItemStack(EIORObsidian), 'Y', "rodBronze"}));
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(AAShovel,1), new Object[]{" X ", " Y "," Y ", 'X', new ItemStack(EIORObsidian), 'Y', "rodBronze"}));
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(AAHoe,1), new Object[]{"XX ", " Y "," Y ", 'X', new ItemStack(EIORObsidian), 'Y', "rodBronze"}));
+            }
+
+
+
+            if (Loader.isModLoaded("betterwithmods"))
+            {
+                Item BWMDirt = Item.REGISTRY.getObject(new ResourceLocation("betterwithmods:dirt_pile"));
+                Item BWMSand = Item.REGISTRY.getObject(new ResourceLocation("betterwithmods:sand_pile"));
+
+                removeCrafting(BWMDirt);
+                removeCrafting(BWMSand);
+
+
+                CRUSHER_RECIPES.add(new CrusherRecipe(new ItemStack(Blocks.DIRT),new ItemStack(BWMDirt,2),new ItemStack(BWMDirt,2),100));
+                CRUSHER_RECIPES.add(new CrusherRecipe(new ItemStack(Blocks.SAND),new ItemStack(BWMSand,2),new ItemStack(BWMSand,2),100));
+
+
             }
 
 
