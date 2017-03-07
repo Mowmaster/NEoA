@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 
 
-version = "0.0.0.3"
+version = "0.0.0.4"
 group= "com.mowmaster.neweraofadventure" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "neweraofadventure"
 
@@ -38,10 +38,10 @@ repositories {
         url 'http://dvs1.progwml6.com/files/maven'
     }
 
-dependencies {
-    deobfCompile "slimeknights.mantle:Mantle:1.10.2-1.+"
-    deobfCompile "slimeknights:TConstruct:1.10.2-2.+"
-}
+    dependencies {
+        deobfCompile "slimeknights.mantle:Mantle:1.10.2-1.+"
+        deobfCompile "slimeknights:TConstruct:1.10.2-2.+"
+    }
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
@@ -63,7 +63,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-}
+//}
 
 processResources
 {
@@ -83,4 +83,5 @@ processResources
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
 }

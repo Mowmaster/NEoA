@@ -1,7 +1,8 @@
 package com.mowmaster.neoa.modtweaks;
 
+//import de.ellpeck.actuallyadditions.api.recipe.CrusherRecipe;
+//import de.ellpeck.actuallyadditions.api.recipe.LensConversionRecipe;
 import de.ellpeck.actuallyadditions.api.recipe.CrusherRecipe;
-import de.ellpeck.actuallyadditions.api.recipe.LensConversionRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -14,13 +15,14 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import static com.mowmaster.neoa.recipes.RecipeRemover.removeCrafting;
 import static com.mowmaster.neoa.recipes.RecipeRemover.removedCraftingItems;
-import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.*;
+import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.CRUSHER_RECIPES;
+import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.OIL_GENERATOR_RECIPES;
+//import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.*;
 
-/**
- * Created by KingMowmaster on 2/5/2017.
- */
+
 public class ActuallyAdditions
 {
+
     public static void checkActuallyAdditons()
     {
         if(Loader.isModLoaded("actuallyadditions"))
@@ -113,5 +115,6 @@ public class ActuallyAdditions
 
         }
     }
+
 }
 

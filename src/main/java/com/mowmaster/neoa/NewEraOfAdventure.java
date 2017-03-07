@@ -1,7 +1,7 @@
 package com.mowmaster.neoa;
 
 import com.mowmaster.neoa.configabs.Config;
-import com.mowmaster.neoa.fluids.FluidCakeBatter;
+import com.mowmaster.neoa.fluids.Fluids;
 import com.mowmaster.neoa.items.ItemRegistry;
 import com.mowmaster.neoa.modtweaks.*;
 import com.mowmaster.neoa.proxies.CommonProxy;
@@ -46,7 +46,7 @@ public class NewEraOfAdventure {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        FluidCakeBatter.register();
+        Fluids.register();
         proxy.PreInit();
         MinecraftForge.EVENT_BUS.register(this);
     }

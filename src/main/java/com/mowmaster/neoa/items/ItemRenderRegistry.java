@@ -18,6 +18,10 @@ public class ItemRenderRegistry
             register(ItemRegistry.glass_pile);
         }
         register(ItemRegistry.tool_crusher);
+        register(ItemRegistry.bowl_of_cake_batter);
+        register(ItemRegistry.bowl_of_pumpkin_pie);
+        register(ItemRegistry.bowl_of_cookie_dough);
+        register(ItemRegistry.bowl_of_bread_dough);
     }
     public static void register(Item item)
     {
