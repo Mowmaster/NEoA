@@ -27,7 +27,7 @@ public class ImmersiveEngineering
         BottlingMachineRecipe.addRecipe(new ItemStack(bowl_of_pumpkin_pie,1),new ItemStack(Items.BOWL),new FluidStack(Fluids.FluidPie.instance,1000));
         GameRegistry.addSmelting(new ItemStack(bowl_of_pumpkin_pie),new ItemStack(Items.PUMPKIN_PIE,1), 0.1F);
 
-        MixerRecipe.addRecipe(new FluidStack(Fluids.FluidCookie.instance,2000),new FluidStack(milk,1000), new Object[]{new ItemStack(Items.WHEAT,2),new ItemStack(Items.DYE,3,1),new ItemStack(Items.SUGAR,1)},3200);
+        MixerRecipe.addRecipe(new FluidStack(Fluids.FluidCookie.instance,2000),new FluidStack(milk,1000), new Object[]{new ItemStack(Items.WHEAT,2),new ItemStack(Items.DYE,1,3),new ItemStack(Items.SUGAR,1)},3200);
         BottlingMachineRecipe.addRecipe(new ItemStack(bowl_of_cookie_dough,1),new ItemStack(Items.BOWL),new FluidStack(Fluids.FluidCookie.instance,1000));
         GameRegistry.addSmelting(new ItemStack(bowl_of_cookie_dough),new ItemStack(Items.COOKIE,8), 0.1F);
 
@@ -44,7 +44,7 @@ public class ImmersiveEngineering
 
         MixerRecipe.addRecipe(new FluidStack(Fluids.FluidBSoup.instance,2000),new FluidStack(FluidRegistry.WATER,1000), new Object[]{new ItemStack(Items.BEETROOT,6)},3200);
         BottlingMachineRecipe.addRecipe(new ItemStack(Items.BEETROOT_SOUP,1),new ItemStack(Items.BOWL),new FluidStack(Fluids.FluidBSoup.instance,1000));
-        
+
 
         //MixerRecipe.addRecipe(new FluidStack(fluidConcrete,500), new FluidStack(FluidRegistry.WATER,500),new Object[]{"sand","sand",Items.CLAY_BALL,"gravel"}, 3200);
 
