@@ -6,4 +6,23 @@ item.glass_pile.name=Pile of Glass Dust
 item.tool_crusher.name=Portable Crusher
 
 
+item.bowl_of_cake_batter=Bowl of Cake Batter
+item.bowl_of_pumpkin_pie=Bowl of Pumpkin Pie Batter
+item.bowl_of_cookie_dough=Bowl of Cookie Dough
+item.bowl_of_bread_dough=Bowl of Bread Dough
+
 tile.cake.name=Cake Batter
+tile.pie.name=Pumpkin Pie Batter
+tile.cookie.name=Cookie Batter
+tile.bread.name=Bread Dough
+tile.msoup.name=Mushroom Soup
+tile.rsoup.name=Rabbit Soup
+tile.bsoup.name=Beetroot Soup
+
+fluid.cake=Cake Batter
+fluid.pie=Pumpkin Pie Batter
+fluid.cookie=Cookie Dough
+fluid.bread=Bread Dough
+fluid.msoup=Mushroom Soup
+fluid.rsoup=Rabbit Soup
+fluid.bsoup=Beetroot Soup
