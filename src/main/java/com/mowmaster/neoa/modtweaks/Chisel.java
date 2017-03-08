@@ -10,9 +10,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import static com.mowmaster.neoa.recipes.RecipeRemover.removeCrafting;
 
-/**
- * Created by KingMowmaster on 2/10/2017.
- */
 public class Chisel
 {
     public static void checkChisel()
