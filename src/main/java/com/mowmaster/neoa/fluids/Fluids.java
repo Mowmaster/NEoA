@@ -30,6 +30,8 @@ public class Fluids
     private static ModelResourceLocation bsoup_location = new ModelResourceLocation(Reference.MODID + ":" + BlockBSoup.name, "fluid");
 
     public static void register() {
+        FluidRegistry.enableUniversalBucket();
+        
         FluidRegistry.registerFluid(FluidCake.instance);
         GameRegistry.registerBlock(BlockCake.instance, BlockCake.name);
         Item cake = Item.getItemFromBlock(BlockCake.instance);

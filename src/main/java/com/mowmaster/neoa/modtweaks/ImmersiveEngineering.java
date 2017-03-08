@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import static com.mowmaster.neoa.items.ItemRegistry.*;
@@ -45,6 +46,11 @@ public class ImmersiveEngineering
         MixerRecipe.addRecipe(new FluidStack(Fluids.FluidBSoup.instance,2000),new FluidStack(FluidRegistry.WATER,1000), new Object[]{new ItemStack(Items.BEETROOT,6)},3200);
         BottlingMachineRecipe.addRecipe(new ItemStack(Items.BEETROOT_SOUP,1),new ItemStack(Items.BOWL),new FluidStack(Fluids.FluidBSoup.instance,1000));
 
+
+        if(Loader.isModLoaded("EnderIO")) {
+            //Bottle of Enchanting
+            BottlingMachineRecipe.addRecipe(new ItemStack(Items.EXPERIENCE_BOTTLE, 1), new ItemStack(Items.GLASS_BOTTLE), new FluidStack(FluidRegistry.getFluid("xpjuice"), 200));
+        }
 
         //MixerRecipe.addRecipe(new FluidStack(fluidConcrete,500), new FluidStack(FluidRegistry.WATER,500),new Object[]{"sand","sand",Items.CLAY_BALL,"gravel"}, 3200);
 

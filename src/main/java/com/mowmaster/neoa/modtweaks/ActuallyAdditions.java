@@ -3,6 +3,7 @@ package com.mowmaster.neoa.modtweaks;
 //import de.ellpeck.actuallyadditions.api.recipe.CrusherRecipe;
 //import de.ellpeck.actuallyadditions.api.recipe.LensConversionRecipe;
 import de.ellpeck.actuallyadditions.api.recipe.CrusherRecipe;
+import de.ellpeck.actuallyadditions.api.recipe.LensConversionRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -15,8 +16,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import static com.mowmaster.neoa.recipes.RecipeRemover.removeCrafting;
 import static com.mowmaster.neoa.recipes.RecipeRemover.removedCraftingItems;
-import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.CRUSHER_RECIPES;
-import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.OIL_GENERATOR_RECIPES;
+import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.*;
 //import static de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI.*;
 
 
@@ -108,6 +108,10 @@ public class ActuallyAdditions
 
 
             }
+            // SolidifiedExperience
+            Item SolidXP = Item.REGISTRY.getObject(new ResourceLocation("actuallyadditions:itemSolidifiedExperience"));
+            RECONSTRUCTOR_LENS_CONVERSION_RECIPES.add(new LensConversionRecipe(new ItemStack(Items.EXPERIENCE_BOTTLE,1),new ItemStack(SolidXP,1),500,lensDefaultConversion));
+
 
 
 
