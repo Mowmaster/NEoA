@@ -46,7 +46,9 @@ public class NewEraOfAdventure {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        Fluids.register();
+        //Fluids.register();
+        //MWFluids.init();
+        Fluids.regfluids();
         proxy.PreInit();
         MinecraftForge.EVENT_BUS.register(this);
     }
